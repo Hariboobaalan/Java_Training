@@ -16,7 +16,7 @@ class Singleton{
      * 
      * @return The object is being returned.
      */
-    public static Singleton createInstance(){
+     public static Singleton createInstance(){
         if(obj==null){
             obj=new Singleton();
         }

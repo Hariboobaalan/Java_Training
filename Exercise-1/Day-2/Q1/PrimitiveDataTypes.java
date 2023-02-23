@@ -29,10 +29,10 @@ public class PrimitiveDataTypes {
         passByReference(array);
         
         
-        Balloon b = new Balloon();
-        System.out.println("Balloon current color = "+b.color);
-        changeColor(b);
-        System.out.println("Balloon new color = "+b.color);
+        Balloon balloon = new Balloon();
+        System.out.println("Balloon current color = "+balloon.color);
+        changeColor(balloon);
+        System.out.println("Balloon new color = "+balloon.color);
     }
 
 

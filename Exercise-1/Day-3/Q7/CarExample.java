@@ -10,7 +10,7 @@ import Q7.vehicle.fourwheeler;
 // Create class car that extends the abstract class.
 class Car extends fourwheeler{
     void display(){
-        System.out.println("Car class diaply method invoked");
+        System.out.println("Car class display method invoked");
     }
 }
 public class CarExample {
