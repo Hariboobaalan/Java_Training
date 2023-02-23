@@ -1,7 +1,5 @@
 package Q4;
-
 import java.util.Scanner;
-import java.util.Stack;
 
 
 /**
@@ -17,13 +15,16 @@ public class StackIntegers {
      */
     public static void main(String[] args) {
         
-        Stack<Integer> stack = new Stack<>();
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
+        Stack stack = new Stack(N);
         for(int i=0;i<N;i++){
-            stack.add(sc.nextInt());
+            stack.push(sc.nextInt());
         }
-        System.out.println(stack);
+        stack.display();
+        System.out.println("Popped element = "+ stack.pop());
+        System.out.println("Popped element = "+ stack.pop());
+        stack.display();
         sc.close();
     }
 }
