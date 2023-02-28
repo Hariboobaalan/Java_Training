@@ -16,9 +16,9 @@ public class ThreadClass {
         StringBuffer sBuffer = new StringBuffer("A");
 
         // Create 3 instances of MyClass
-        MyClass myClassInstance1 = new MyClass(sBuffer);
-        MyClass myClassInstance2 = new MyClass(sBuffer);
-        MyClass myClassInstance3 = new MyClass(sBuffer);
+        ThreadsTest myClassInstance1 = new ThreadsTest(sBuffer);
+        ThreadsTest myClassInstance2 = new ThreadsTest(sBuffer);
+        ThreadsTest myClassInstance3 = new ThreadsTest(sBuffer);
 
         // Call the run method of each of the instances
         myClassInstance1.run();
@@ -29,14 +29,14 @@ public class ThreadClass {
 
 
 // Class named MyClass that extends Thread class
-class MyClass extends Thread{
+class ThreadsTest extends Thread{
     StringBuffer stringBuffer;
 
     /**
      * Parameterized constructor
      * @param sBuffer
      * */
-    MyClass(StringBuffer sBuffer){
+    ThreadsTest(StringBuffer sBuffer){
         this.stringBuffer = sBuffer;
     }
 

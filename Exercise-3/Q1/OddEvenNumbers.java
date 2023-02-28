@@ -18,26 +18,26 @@ public class OddEvenNumbers{
     
     public static void main(String[] args) {
         // Create Thread Pool
-        ExecutorService es = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         // Create object for OddEvenNumbers class
         OddEvenNumbers object = new OddEvenNumbers();
 
         // Execute the thread to print Even Numbers
-        es.execute(()->{
+        executorService.execute(()->{
             Thread.currentThread().setName("Even Numbers Thread");
             object.printNumbers(2);
         });
         
         // Execute the thread to print Odd Numbers
-        es.execute(()->{
+        executorService.execute(()->{
             Thread.currentThread().setName("Odd Numbers Thread");
             object.printNumbers(1);
             
         });
 
         // Shutdown ExecutorService
-        es.shutdown();
+        executorService.shutdown();
 
     }
 

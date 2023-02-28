@@ -18,26 +18,26 @@ public class CountingThread {
      */
     public static void main(String[] args) {
         // Create Thread Pool
-        ExecutorService es = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
         // Create object for Count class
         Count object = new Count();
 
         // Execute the thread to Count numbers from 1 to 100
-        es.execute(()->{
+        executorService.execute(()->{
             for(;Count.number<101;Count.number++){
                 object.countNumbers();
             }
         });
 
         // Execute the thread to display Message after printing every 10 numbers
-        es.execute(()->{
+        executorService.execute(()->{
             for(int iterationVariable=0;iterationVariable<9;iterationVariable++){
                 object.displayMessage();
             }
             System.exit(0);
         });
         // Shutdown ExecutorService
-        es.shutdown();
+        executorService.shutdown();
     }
 }
 
@@ -51,11 +51,11 @@ class Count{
             notify();
             try{
                 wait();
-            }catch(Exception e){}
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
-        try {
-            // Thread.sleep(1000);
-        } catch (Exception e) {}
+        
     }
 
     // Method to print the Message after counting every 10 numbers
@@ -64,6 +64,8 @@ class Count{
         try{
             notify();   
             wait();
-        }catch(Exception e){}
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

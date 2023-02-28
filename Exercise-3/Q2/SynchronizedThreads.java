@@ -18,19 +18,19 @@ public class SynchronizedThreads {
 
     public static void main(String[] args) {
         // Create Thread Pool
-        ExecutorService es = Executors.newFixedThreadPool(3);
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
 
         // Create object for SynchronizedThreads class
         SynchronizedThreads object = new SynchronizedThreads();
 
         // Execute the thread to print Open Paranthesis
-        es.execute(()->
+        executorService.execute(()->
         {
             object.openParanthesis();   
         }
         );
         // Execute the thread to print hyphen
-        es.execute(()->
+        executorService.execute(()->
         {
             for(int counter=0;counter<6;counter++){
                 object.hyphen();   
@@ -38,13 +38,13 @@ public class SynchronizedThreads {
         }
         );
         // Execute the thread to print Message
-        es.execute(()->
+        executorService.execute(()->
         {
             object.displayMessage();   
         }
         );
         // Execute the thread to print hyphen
-        es.execute(()->
+        executorService.execute(()->
         {
             for(int counter=0;counter<6;counter++){
                 object.hyphen();   
@@ -52,13 +52,13 @@ public class SynchronizedThreads {
         }
         );
         // Execute the thread to print close Paranthesis
-        es.execute(()->
+        executorService.execute(()->
             {
                 object.closeParanthesis();   
             }
         );
         // Shutdown ExecutorService
-        es.shutdown();
+        executorService.shutdown();
     }
 
     synchronized public void openParanthesis(){

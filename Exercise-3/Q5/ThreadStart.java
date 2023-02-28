@@ -12,7 +12,7 @@ public class ThreadStart {
      */
     public static void main(String[] args) {
         // Create object for MyClass
-        MyClass classObject = new MyClass();
+        ThreadDemo classObject = new ThreadDemo();
 
         // Start the thread
         classObject.start();
@@ -23,7 +23,7 @@ public class ThreadStart {
 }
 
 // Class MyClass that extends Thread Class
-class MyClass extends Thread{
+class ThreadDemo extends Thread{
 
     // Overriding the method run from Thread class
     @Override
@@ -31,3 +31,11 @@ class MyClass extends Thread{
         System.out.println("Thread triggered.");
     }
 }
+
+/*
+ * From my observation, It is understood that,
+ * The start() method is used to create a new Thread and it inturn internally calls the run() method.
+ * Also, a Thread can only be start once.
+ * We cannot start a thread more than once.
+ * 
+ */

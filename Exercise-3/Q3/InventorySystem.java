@@ -19,37 +19,39 @@ public class InventorySystem {
         // Create object for Inventory class
         Inventory inventoryObject = new Inventory();
         // Create Thread Pool
-        ExecutorService es = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         // Execute the thread to produce item
-        es.execute(()->{
+        executorService.execute(()->{
             for(int iterationVariable=1;iterationVariable<=5;iterationVariable++){
                 inventoryObject.produce(iterationVariable);
             }
         });
 
         // Execute the thread to consume item
-        es.execute(()->{
+        executorService.execute(()->{
             for(int iterationVariable=1;iterationVariable<=5;iterationVariable++){
                 inventoryObject.consume(iterationVariable);
             }
         });
 
         // Shutdown ExecutorService
-        es.shutdown();
+        executorService.shutdown();
     }
 }
 
 class Inventory{
     // Flag variable to indicate Item status
-    static boolean flag=false;
+    boolean flag=false;
 
     //  method to produce item
     synchronized public void produce(int itemId){
         if(flag){
             try{
                 wait();
-            }catch(Exception e){}
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
         flag=!flag;
         System.out.println("Item"+itemId+" Produced");
@@ -61,7 +63,9 @@ class Inventory{
         if(!flag){
             try{
                 wait();
-            }catch(Exception e){}
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         }
         flag=!flag;
         System.out.println("Item"+itemId+" consumed");

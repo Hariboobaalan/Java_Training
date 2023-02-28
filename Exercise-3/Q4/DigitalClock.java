@@ -19,24 +19,26 @@ public class DigitalClock {
      */
     public static void main(String[] args) {
         // Create Thread Pool
-        ExecutorService es = Executors.newFixedThreadPool(3);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
         // Create object for Clock class
         Clock myClock = new Clock();
 
         // Execute the thread to Update time
-        es.execute(()->{
+        executorService.execute(()->{
             synchronized(myClock){
                 while(true){
                     LocalDateTime ldt = LocalDateTime.now();
                     myClock.updateTime(ldt);
                     try{
                         Thread.sleep(1000);
-                    }catch(Exception e){}
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
                 }
             }
         });
         // Execute the thread to display date and time
-        es.execute(()->{
+        executorService.execute(()->{
             synchronized(myClock){
                 while(true){
                     myClock.displayTime();
@@ -44,7 +46,7 @@ public class DigitalClock {
             }
         });
         // Shutdown ExecutorService
-        es.shutdown();
+        executorService.shutdown();
     }
 }
 
@@ -67,7 +69,9 @@ class Clock{
         try{
             notify();
             wait();
-        }catch(Exception e){}
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
     
     // Method to display the date and time
@@ -77,6 +81,8 @@ class Clock{
         notify();
         try{
             wait();
-        }catch(Exception e){} 
+        }catch(Exception e){
+            e.printStackTrace();
+        } 
     }
 }

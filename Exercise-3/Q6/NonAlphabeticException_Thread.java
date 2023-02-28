@@ -19,19 +19,19 @@ public class NonAlphabeticException_Thread {
      */
     public static void main(String[] args) {
         // Create object for MyClass
-        MyClass myClassObject = new MyClass();
+        Alphabetic myClassObject = new Alphabetic();
         // Create Thread Pool
-        ExecutorService es = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
 
         // Execute the thread to get Input
-        es.execute(()->{
+        executorService.execute(()->{
             synchronized(myClassObject){
                 myClassObject.getInput();
             }
         });
 
         // Execute the thread to display message if Exception
-        es.execute(()->{
+        executorService.execute(()->{
             synchronized(myClassObject){
                 while(true){
                     myClassObject.displayMessageIfException();
@@ -39,11 +39,11 @@ public class NonAlphabeticException_Thread {
             }
         });
         // Shutdown ExecutorService
-        es.shutdown();
+        executorService.shutdown();
     }
 }
 
-class MyClass{
+class Alphabetic{
     private char character;
     Scanner sc = new Scanner(System.in);
 
@@ -55,7 +55,9 @@ class MyClass{
                 notify();
                 try{
                     wait();
-                }catch(Exception e){}
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -66,6 +68,8 @@ class MyClass{
         notify();
         try{
             wait();
-        }catch(Exception e){}
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
