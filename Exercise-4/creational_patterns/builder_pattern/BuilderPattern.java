@@ -1,6 +1,15 @@
 package creational_patterns.builder_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class BuilderPattern {
+    /**
+     * 
+     * @param args
+     * @return null
+     */
     public static void main(String[] args) {
         Mall luluMall = (new Mall.BuildMall()).setElectronicsStore("HP Electronics").setFoodCourt("Subway").setGrocery("SPAR").setJewellery("Kalyan").setMobileShop("MI").setTheater("INOX").build();
         System.out.println(luluMall);

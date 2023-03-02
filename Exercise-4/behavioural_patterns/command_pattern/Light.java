@@ -1,5 +1,9 @@
 package behavioural_patterns.command_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class Light {
     
     public void onLights(){

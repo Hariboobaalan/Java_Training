@@ -1,5 +1,9 @@
 package behavioural_patterns.visitor_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public interface HousePartVisitor {
     public void visit(House house);
     public void visit(Brick brick);

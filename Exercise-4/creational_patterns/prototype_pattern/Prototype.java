@@ -1,5 +1,9 @@
 package creational_patterns.prototype_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class Prototype implements Cloneable{
     private static Prototype instance;
     private int employeeId;

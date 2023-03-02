@@ -1,6 +1,15 @@
 package behavioural_patterns.visitor_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class VisitorPattern {
+    /**
+     * 
+     * @param args
+     * @return null
+     */
     public static void main(String[] args) {
         HousePart house = new House();
         house.accept(new HousePartSupplierVisitor());

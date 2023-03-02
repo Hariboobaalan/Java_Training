@@ -1,5 +1,9 @@
 package behavioural_patterns.strategy_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class CompanyContext{
     private CompanyStrategy companyStrategyObject;
 

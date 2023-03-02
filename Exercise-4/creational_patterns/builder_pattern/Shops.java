@@ -1,5 +1,10 @@
 package creational_patterns.builder_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
+
 public class Shops{
     String electronicsStore, foodCourt, mobileShop, jewellery, grocery, theater;
 

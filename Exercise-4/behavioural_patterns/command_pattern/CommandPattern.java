@@ -1,6 +1,15 @@
 package behavioural_patterns.command_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class CommandPattern {
+	/**
+     * 
+     * @param args
+     * @return null
+     */
 	public static void main(String[] args) {
 		ButtonPanel panel = new ButtonPanel();
 		Door door = new Door();

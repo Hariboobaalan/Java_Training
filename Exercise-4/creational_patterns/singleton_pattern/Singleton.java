@@ -1,5 +1,9 @@
 package creational_patterns.singleton_pattern;
 
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
+
 public class Singleton{
     private static Singleton instance;
     String name;
