@@ -1,11 +1,11 @@
 package structural_patterns.flyweight_pattern;
+// import required packages
+import java.util.ArrayList;
+import java.util.List;
 
 /** @author Hariboobaalan
  *  @version 1.0
  */
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MovieDB{
     private final List<Movie> movies = new ArrayList<>();

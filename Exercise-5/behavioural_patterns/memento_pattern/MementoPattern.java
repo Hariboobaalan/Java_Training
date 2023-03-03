@@ -1,14 +1,15 @@
 package behavioural_patterns.memento_pattern;
 
-/** @author Hariboobaalan
- *  @version 1.0
- */
 // Import required packages.
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
 
 public class MementoPattern {
     /**

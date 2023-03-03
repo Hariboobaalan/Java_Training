@@ -1,4 +1,3 @@
-
 package structural_patterns.bridge_pattern;
 
 /** @author Hariboobaalan
