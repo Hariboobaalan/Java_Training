@@ -4,7 +4,7 @@ package structural_patterns.bridge_pattern;
  *  @version 1.0
  */
 
-public class BlueColor extends Color{
+public class BlueColor extends Color {
     @Override
     public void doColor() {
         System.out.print("Blue Color ");

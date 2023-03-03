@@ -10,13 +10,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class MementoPattern{
+public class MementoPattern {
     /**
      * 
      * @param args
      * @return null
      */
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         // Create new Player object
         Player myPlayer = new Player();
@@ -24,11 +24,10 @@ public class MementoPattern{
 
         // Save the state of the Player object
         new WriteObject().saveState(myPlayer);
-        myPlayer.gotAttacked();
-        myPlayer.gotAttacked();
-        myPlayer.gotAttacked();
-        myPlayer.gotAttacked();
-        myPlayer.gotAttacked();
+
+        while(myPlayer.life>=0){
+            myPlayer.gotAttacked();
+        }
         System.out.println("Life Remaining = "+myPlayer.life);
         
 
@@ -38,19 +37,19 @@ public class MementoPattern{
     }
 }
 
-class Player implements Serializable{
+class Player implements Serializable {
     int life = 5;
-    public void gotAttacked(){
+    public void gotAttacked() {
         System.out.println("Player Life reduced...");
         this.life-=1;
     }
 }
 
 // Class with a Method to write the object to a file
-class WriteObject{
-    public void saveState(Player myPlayer) throws Exception{
+class WriteObject {
+    public void saveState(Player myPlayer) throws Exception {
         System.out.println("Saving State...");
-        try(ObjectOutputStream outStream = new ObjectOutputStream(new FileOutputStream("./behavioural_patterns/gamestat.dat"))){
+        try(ObjectOutputStream outStream = new ObjectOutputStream(new FileOutputStream("./behavioural_patterns/memento_pattern/gamestat.dat"))){
             outStream.writeObject(myPlayer);
         }
     }
@@ -58,10 +57,10 @@ class WriteObject{
 
 
 // Class with a Method to read the object from a file
-class ReadObject{
-    public Player restoreState() throws Exception{
+class ReadObject {
+    public Player restoreState() throws Exception {
         System.out.println("Got respawn ... Restoring HealthState...");
-        try(ObjectInputStream inStream = new ObjectInputStream(new FileInputStream("./behavioural_patterns/gamestat.dat"))){
+        try(ObjectInputStream inStream = new ObjectInputStream(new FileInputStream("./behavioural_patterns/memento_pattern/gamestat.dat"))){
             return (Player) inStream.readObject();
         }
     }

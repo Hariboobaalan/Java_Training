@@ -7,7 +7,7 @@ package structural_patterns.flyweight_pattern;
 public class MovieType {
     private String genre;
     private String productions;
-    MovieType(String genre, String productions){
+    MovieType(String genre, String productions) {
         this.genre=genre;
         this.productions=productions;
     }

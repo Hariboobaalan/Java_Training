@@ -6,7 +6,7 @@ package structural_patterns.bridge_pattern;
 
 public abstract class Paint {
     Color color;
-    Paint(Color color){
+    Paint(Color color) {
         this.color = color;
     }
     public abstract void type();

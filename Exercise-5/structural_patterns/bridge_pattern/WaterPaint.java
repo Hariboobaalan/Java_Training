@@ -5,7 +5,7 @@ package structural_patterns.bridge_pattern;
  *  @version 1.0
  */
 
-public class WaterPaint extends Paint{
+public class WaterPaint extends Paint {
     WaterPaint(Color color) {
         super(color);
     }

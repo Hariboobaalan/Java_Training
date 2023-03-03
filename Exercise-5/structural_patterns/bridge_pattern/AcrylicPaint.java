@@ -4,7 +4,7 @@ package structural_patterns.bridge_pattern;
  *  @version 1.0
  */
 
-public class AcrylicPaint extends Paint{
+public class AcrylicPaint extends Paint {
     AcrylicPaint(Color color) {
         super(color);
     }
