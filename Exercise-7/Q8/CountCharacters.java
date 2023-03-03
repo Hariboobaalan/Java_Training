@@ -11,15 +11,18 @@ public class CountCharacters {
      * @return null
      */
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        int count = 0;
 
-        // Checking if there is a next input, and adding the length of the input to the count variable.
-        while (scanner.hasNext()) {
-            count += scanner.next().length();
+        int count = 0;
+        try{
+            Scanner scanner = new Scanner(System.in);
+
+            // Checking if there is a next input, and adding the length of the input to the count variable.
+            while (scanner.hasNext()) {
+                count += scanner.next().length();
+            }
+            scanner.close();
+        }finally{
+            System.out.println("Number of characters entered = "+count);
         }
-        System.out.println("Display the count");
-        System.out.println(count);
-        scanner.close();
     }
 }
