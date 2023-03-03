@@ -9,10 +9,10 @@ import java.util.HashMap;
 public class MovieFactory{
     private static final HashMap<String,MovieType> movieTypesDataBase = new HashMap<>();
     
-    public static MovieType getMovieType(String genre, String hero){
+    public static MovieType getMovieType(String genre, String productions){
         if(movieTypesDataBase.get(genre)==null){
-            MovieType movieObject = new MovieType(genre,hero);
-            movieTypesDataBase.put(genre,movieObject);
+            MovieType movieTypeObject = new MovieType(genre,productions);
+            movieTypesDataBase.put(genre,movieTypeObject);
         }
         return movieTypesDataBase.get(genre);
     }
