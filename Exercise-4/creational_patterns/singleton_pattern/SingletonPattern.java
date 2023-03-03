@@ -17,18 +17,18 @@ public class SingletonPattern {
 
         ExecutorService service = Executors.newFixedThreadPool(3);
         service.execute(()->{
-            Singleton trainee1 = Singleton.createInstance();
+            Singleton trainee1 = Singleton.getInstance();
                 trainee1.setName("TOM");
                 trainee1.displayName();
         });
         
         service.execute(()->{
-            Singleton trainee2 = Singleton.createInstance();
+            Singleton trainee2 = Singleton.getInstance();
                 trainee2.displayName();
         });
 
         service.execute(()->{
-            Singleton trainee3 = Singleton.createInstance();
+            Singleton trainee3 = Singleton.getInstance();
                 trainee3.displayName();
         });
         service.shutdown();
