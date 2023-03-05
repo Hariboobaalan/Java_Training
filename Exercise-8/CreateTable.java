@@ -1,10 +1,12 @@
 package exercise8;
 
+import java.sql.Statement;
+import java.sql.Connection;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.sql.*;
 
 public class CreateTable{
     /**

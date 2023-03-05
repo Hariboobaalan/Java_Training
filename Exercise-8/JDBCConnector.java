@@ -1,10 +1,11 @@
 package exercise8;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
-
-import java.sql.*;
 
 public class JDBCConnector {
     static Connection connection=null;

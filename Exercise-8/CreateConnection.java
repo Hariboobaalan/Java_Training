@@ -1,10 +1,13 @@
 package exercise8;
 
+import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.sql.*;
 
 public class CreateConnection {
     /**

@@ -1,10 +1,13 @@
 package exercise8;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.sql.*;
 
 public class InsertAndDisplay{
     /**
