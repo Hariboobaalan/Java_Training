@@ -1,13 +1,13 @@
 package Q15;
 
-/** @author Hariboobaalan
- *  @version 1.0
- */
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
 
 public class FileCopy {
     /**

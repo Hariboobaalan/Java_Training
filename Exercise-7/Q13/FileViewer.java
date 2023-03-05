@@ -1,10 +1,11 @@
 package Q13;
 
+import java.io.FileInputStream;
+import java.io.FileReader;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
-import java.io.FileInputStream;
-import java.io.FileReader;
 
 public class FileViewer {
     /**

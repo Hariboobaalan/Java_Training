@@ -1,10 +1,11 @@
 package Q9;
 
+import java.util.Scanner;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.util.Scanner;
 
 public class CountWords {
     /**

@@ -1,12 +1,12 @@
 package Q16;
 
-/** @author Hariboobaalan
- *  @version 1.0
- */
-
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.Date;
+
+/** @author Hariboobaalan
+ *  @version 1.0
+ */
 
 public class WriteObject {
     static String filePath;

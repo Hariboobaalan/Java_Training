@@ -1,11 +1,12 @@
 package Q12;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 
 public class ImageCopy {
     /**

@@ -1,10 +1,11 @@
 package Q10;
 
+import java.io.File;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.io.File;
 
 public class FileHandling {
     /**
@@ -34,7 +35,7 @@ public class FileHandling {
         System.out.println("Size of the file = " + destFile.length());
 
         // flag to check the file has been deleted or not.
-        flag = destFile.delete();
+        // flag = destFile.delete();
 
         // If flag is true, then file is deleted, else delete is Unsuccessful.
         if (flag) {

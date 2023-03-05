@@ -1,12 +1,13 @@
 package Q14;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /** @author Hariboobaalan
  *  @version 1.0
  */
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class FileCopier {
     /**
