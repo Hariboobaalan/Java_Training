@@ -196,20 +196,4 @@ public class UserDAOImpl extends UserDAO implements Cloneable {
 			return 0;
 		}
 	}
-
-	public static void main(String[] args) {
-		UserDAO user = new UserDAOImpl();
-		
-//		System.out.println(user.findByID(1));
-
-//		System.out.println(user.findByName("hi"));
-
-//		UserDTO u = user.findByID(1);
-//		u.setUname("ramu");
-//		u.setUpass("secret");
-//		int n = user.updateUser(u);
-		
-		System.out.println(user.findAll());
-
-	}
 }

@@ -138,21 +138,5 @@ public class InvoiceTransactionDAOImpl extends InvoiceTransactionDAO implements 
 			return 0;
 		}
 	}
-	
-	public static void main(String[] args) {
-		InvoiceTransactionDAOImpl invoiceTrans = new InvoiceTransactionDAOImpl();
-		
-		// System.out.println(invoiceTrans.findByInvoiceNumber(12));
-
-
-//		InvoiceTransactionDTO invoicedto = invoiceTrans.findByInvoiceNumber(13);
-//		invoicedto.setItemNumber(15);
-//		invoicedto.setItemQuantity(20);
-//		int n = invoiceTrans.updateInvoice(invoicedto);
-//		n=invoiceTrans.deleteByInvoiceNumber(13);
-		
-//		System.out.println(invoiceTrans.findAll());
-
-	}
 
 }

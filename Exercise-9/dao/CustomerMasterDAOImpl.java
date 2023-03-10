@@ -165,21 +165,5 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 		
 		}
 	}
-    public static void main(String[] args) {
-		
-   	// CustomerMasterDAOImpl customerMaster=new CustomerMasterDAOImpl();
-    // 	System.out.println(customerMaster.findByCustomerId(1));
-    // 	System.out.println(customerMaster.findByCustomerName("abc"));
-   	// System.out.println(customerMaster.findAll());
-    // 	System.out.println();
-     	
-    // 	CustomerMasterDTO customerMasterDTO = customerMaster.findByCustomerId(3);
-    // 	customerMasterDTO.setCustomerName("superman");
-	// 	int n=customerMaster.update(customerMasterDTO);
-	// 	System.out.println(n);
-		
-		
-	// 	customerMaster.deleteCustomer(customerMasterDTO);	
-	}
 	
 }

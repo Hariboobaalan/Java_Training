@@ -196,23 +196,4 @@ public class ItemMasterDAOImpl extends ItemMasterDAO implements Cloneable{
 		}
 	}
 	
-	public static void main(String[] args) {
-		ItemMasterDAOImpl itemMaster = new ItemMasterDAOImpl();
-		
-//		System.out.println(itemMaster.findByID(1));
-
-//		System.out.println(itemMaster.findByName("hi"));
-
-//		
-		ItemMasterDTO item = itemMaster.findItemByID(123);
-		System.out.println(item.getItemname());
-		item=itemMaster.findItemByName("JBL");
-		System.out.println(item.getItemno()+" "+item.getItemprice());
-		item.setItemname("RealME");
-		item.setItemprice(50);
-		int n = itemMaster.updateItem(item);
-		
-//		System.out.println(itemMaster.findAll());
-
-	}
 }

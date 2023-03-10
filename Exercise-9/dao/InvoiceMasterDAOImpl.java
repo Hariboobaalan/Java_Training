@@ -149,19 +149,4 @@ public class InvoiceMasterDAOImpl extends InvoiceMasterDAO implements Cloneable 
 		}
 	}
 	
-	
-public static void main(String[] args) {
-		
-    	InvoiceMasterDAOImpl invoiceMaster=new InvoiceMasterDAOImpl();
-    	System.out.println(invoiceMaster.findByInvoiceNo(13));
-    	
-    	InvoiceMasterDTO invoiceMasterDTO = invoiceMaster.findByInvoiceNo(13);
-    	invoiceMasterDTO.setCustomerid(256);
-		int n=invoiceMaster.update(invoiceMasterDTO);
-		invoiceMaster.delete(invoiceMasterDTO);
-		
-    	System.out.println(invoiceMaster.findAll());
-    	
-		
-	}
 }
