@@ -43,6 +43,7 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 		// TODO Auto-generated constructor stub
 	}
 
+	// This method is used to find the customer using their customer ID
 	public CustomerMasterDTO findByCustomerId(int number) {
 		try {
 		Connection connection=DBUtility.getConnection();
@@ -65,6 +66,8 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 			return null;
 		}
 	}
+	
+	//This method is used to find the customer by their name
 	public CustomerMasterDTO findByCustomerName(String name) {
 		try {
 			Connection connection=DBUtility.getConnection();
@@ -88,6 +91,7 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 			}
 	}
 	
+	// This method returns a List of all customers
 	public Collection<CustomerMasterDTO> findAll(){
 		
 		try {
@@ -110,6 +114,7 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 			}
 	}
 	
+	// This method is used to update the details of the specified customer
 	public int update(CustomerMasterDTO customerdto) {
 		try {
 			Connection connection=DBUtility.getConnection();
@@ -139,6 +144,7 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 		
 	}
 	
+	// This method is used to delete a customer account from the database
 	public void deleteCustomer(CustomerMasterDTO customerdto) {
 		try {
 			Connection connection=DBUtility.getConnection();
@@ -173,8 +179,7 @@ public class CustomerMasterDAOImpl extends CustomerMasterDAO implements Cloneabl
 	// 	System.out.println(n);
 		
 		
-	// 	customerMaster.deleteCustomer(customerMasterDTO);
-//		
+	// 	customerMaster.deleteCustomer(customerMasterDTO);	
 	}
 	
 }
